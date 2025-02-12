@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Permanent+Marker&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lilita One", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 16px;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: black;
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+/* Navigation Menu Styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Sidebar Styles for Mobile */
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: black;
+    flex-direction: column;
+    border-top: 1px solid #fff;
+    opacity: 0.9;
+    display: none;
+  }
+  .open {
+    display: block;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  .logo {
+    font-size: 20px;
+  }
+}
+
+.hero {
+  background: url("/images/banner.jpeg") no-repeat center center/cover;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 10px 40px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 20px;
+  opacity: 0.8;
+  font-weight: bold;
+}
+
+.cta {
+  background: url("https://sayahomes.com/assets/images/career-Banner.webp")
+    no-repeat center center/cover;
+  text-align: center;
+  padding: 100px 20px;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+
+.cta h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.cta button {
+  padding: 10px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.features {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.feature-item {
+  text-align: center;
+  width: 250px;
+  border-bottom: 1px solid;
+}
+
+.feature-item img {
+  height: auto;
+  border-radius: 10px;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* job page style */
+.jobs {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.jobs form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.jobs input:nth-child(1) {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 400px;
+}
+.jobs input:nth-child(2){
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  
+
+}
+
+.jobs button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+@media(max-width:768px){
+  .jobs h1{
+    padding: 10px;
+  }
+}
+
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.job-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.job-item button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+}
+
+/* post job style */
+.post-job {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.post-job form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.post-job input,
+.post-job textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.post-job button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+}
+
+/* signIn SignUp page style */
+.signup,
+.signin {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.signup form,
+.signin form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.signup input,
+.signin input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup button,
+.signin button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+/* blog page style  */
+
+.blog {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.blog-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.blog-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 20%;
+  text-align: left;
+}
+
+.blog-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.blog-item h3 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.blog-item p {
+  margin: 10px 0;
+}
+
+.blog-item a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blog-item a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Page Styles */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Responsive Styles blog page */
+@media (max-width: 768px) {
+  .blog-list {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .blog-item {
+    width: 80%;
+    margin-bottom: 20px;
+    margin: auto;
+  }
+
+  .contact form {
+    width: 90%;
+  }
+}
+
+/* footer styles code  */
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links li {
+  display: inline;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+/* Responsive Footer */
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
