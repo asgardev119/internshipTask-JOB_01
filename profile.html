@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up - JOB_01</title>
+    <title>Profile - JOB_01</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="web icon" type="png" href="images/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -17,33 +21,37 @@
           <li><a href="post-job.html">Post Job</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
-
-          <li><a href="signup.html">Sign Up</a></li>
         </ul>
         <div class="menu-icon" id="menu-icon">&#9776;</div>
       </nav>
     </header>
 
-    <section class="signup">
-      <h1>Sign Up</h1>
-      <form>
-        <label for="username">First name</label>
-        <input type="text" id="firstname" name="firstname" required maxlength="15"/>
-        <label for="username">Last name</label>
-        <input type="text" id="lastname" name="lastname" required  max="15"/>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required  minlength="6"/>
-        <small>
-          <span> already account SignIn </span
-          ><a href="signin.html">here</a></small
-        >
-        <button type="submit">Sign Up</button>
-      </form>
+    <section class="profile-container">
+      <h1>Your Profile</h1>
+      <div class="profile-details">
+        <div class="profile-card">
+          <div class="profile-header">
+            <img
+              src="/images/icon.png"
+              alt="Profile Picture"
+              class="profile-picture"
+            />
+            <h3 id="firstname">firstname</h3>
+            <h3 id="lastname">lasttname</h3>
+          </div>
+          <div class="profile-info">
+            <p id="profile-email">Email</p>
+            <p><strong>Joined:</strong> <span id="profile-joined"></span></p>
+            <p>
+              <strong>Bio:</strong>
+              <span id="profile-bio">No bio available.</span>
+            </p>
+          </div>
+          <button class="logout-button" onclick="logout()">Logout</button>
+        </div>
+      </div>
     </section>
+
     <footer>
       <div class="footer-content">
         <div class="footer-section">
@@ -76,6 +84,29 @@
         <p>&copy; 2025 JOB_01. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+      if (loggedInUser) {
+        document.getElementById("lastname").textContent = loggedInUser.lastname;
+        document.getElementById("firstname").textContent =
+          loggedInUser.firstname;
+        document.getElementById("profile-email").textContent =
+          loggedInUser.email;
+        document.getElementById("profile-joined").textContent =
+          new Date().toLocaleDateString();
+      } else {
+        alert("You are not logged in. Redirecting to the home page...");
+        window.location.href = "index.html";
+      }
+
+      // Logout function
+      function logout() {
+        localStorage.removeItem("loggedInUser");
+        alert("You have been logged out.");
+        window.location.href = "index.html";
+      }
+    </script>
 
     <script src="shared.js"></script>
     <script src="script.js"></script>

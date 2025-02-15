@@ -195,14 +195,12 @@ header {
   border-radius: 5px;
   width: 400px;
 }
-.jobs input:nth-child(2){
+.jobs input:nth-child(2) {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 200px;
-  
-
 }
 
 .jobs button {
@@ -216,8 +214,8 @@ header {
   border: 1px solid white;
 }
 
-@media(max-width:768px){
-  .jobs h1{
+@media (max-width: 768px) {
+  .jobs h1 {
     padding: 10px;
   }
 }
@@ -416,6 +414,80 @@ header {
   }
 }
 
+
+/* profiile ui style */
+
+.profile-container {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.profile-container h1 {
+  text-align: center;
+}
+
+/* Profile Card */
+
+.profile-card {
+  height: auto;
+  width: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  border-radius: 10px;
+  margin: auto;
+  padding: 20px;
+}
+
+
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #6200ea;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+.profile-header {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-info {
+  color: #666;
+
+}
+
+.profile-info p {
+  margin: 0.5rem 0;
+}
+
+.profile-info strong {
+  color: #6200ea;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+
 /* footer styles code  */
 
 footer {
@@ -507,3 +579,6 @@ footer {
     justify-content: center;
   }
 }
+
+
+
