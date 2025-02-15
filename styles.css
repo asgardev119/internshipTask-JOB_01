@@ -96,9 +96,11 @@ header {
 }
 
 .hero {
-  background: url("/images/banner.jpeg") no-repeat center center/cover;
-  text-align: center;
+  background: url("images/banner.jpeg") no-repeat center center/cover;
+  text-align: start;
   padding: 100px 20px;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero h1 {
@@ -123,10 +125,10 @@ header {
 .cta {
   background: url("https://sayahomes.com/assets/images/career-Banner.webp")
     no-repeat center center/cover;
-  text-align: center;
+  text-align: start;
   padding: 100px 20px;
   text-align: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
   background-color: #f4f4f4;
 }
 
@@ -172,7 +174,7 @@ header {
 
 /* job page style */
 .jobs {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -246,7 +248,7 @@ header {
 
 /* post job style */
 .post-job {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -280,7 +282,7 @@ header {
 /* signIn SignUp page style */
 .signup,
 .signin {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -316,7 +318,7 @@ header {
 /* blog page style  */
 
 .blog {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -364,7 +366,7 @@ header {
 
 /* Contact Page Styles */
 .contact {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
