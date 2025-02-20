@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const signUpForm = document.querySelector(".signup form");
 
   signUpForm.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the form from submitting the traditional way
+    event.preventDefault(); 
 
     // Get input values
     const firstname = document.getElementById("firstname").value.trim();
@@ -64,9 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Save the updated users array back to localStorage
     localStorage.setItem("users", JSON.stringify(users));
 
-    // Notify the user of successful sign-up
-    alert("Sign up successful! Redirecting to the sign-in page...");
-
     // Redirect to the sign-in page
     window.location.href = "signin.html";
   });
@@ -94,9 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (user) {
       localStorage.setItem("loggedInUser", JSON.stringify(user));
-
-      alert("Sign in successful! Redirecting to the home page...");
-
       window.location.href = "index.html";
     } else {
       alert("Invalid email or password. Please try again.");
@@ -125,3 +119,5 @@ function updateHeader() {
     navLinks.appendChild(profileLink);
   }
 }
+
+
