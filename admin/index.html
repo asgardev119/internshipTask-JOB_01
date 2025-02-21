@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Job Posting</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link rel="web icon" type="png" href="../images/webicon.png" />
+  </head>
+  <body>
+    <!-- Login Section -->
+    <div id="login-section" class="login-section">
+      <h2>Admin Login</h2>
+      <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required />
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <!-- Job Post Section (Initially Hidden) -->
+    <div id="admin-dashboard" class="admin-dashboard" style="display: none">
+      <h2>Welcome, Admin</h2>
+      <button id="logout-btn" class="logout-btn">Logout</button>
+
+      <div id="job-summary">
+        <h3>Total Jobs Posted: <span id="total-jobs">0</span></h3>
+      </div>
+
+      <div class="dashboard-buttons">
+        <button id="post-job-btn" class="post-job-btn">Post a New Job</button>
+        <button id="view-jobs-btn" class="view-jobs-btn">
+          View Posted Jobs
+        </button>
+      </div>
+
+      <!-- Job Post Form Section -->
+      <div id="job-post-section" class="job-post-section" style="display: none">
+        <h3>Post a New Job</h3>
+
+        <form id="job-post-form">
+          <label for="job-title">Job Title:</label>
+          <input type="text" id="job-title" required />
+
+          <label for="company-name">Company Name:</label>
+          <input type="text" id="company-name" required />
+
+          <label for="location">Location:</label>
+          <input type="text" id="location" required />
+
+          <label for="salary">Salary:</label>
+          <input type="text" id="salary" required />
+
+          <label for="experience">Experience (in years):</label>
+          <input type="text" id="experience" required />
+
+          <label for="job-url">Job URL:</label>
+          <input type="url" id="job-url" required />
+
+          <button type="submit">Post Job</button>
+        </form>
+      </div>
+
+      <!-- Posted Jobs List -->
+      <div id="posted-jobs-list" style="display: none">
+        <h3>Posted Jobs</h3>
+        <ul id="job-list"></ul>
+      </div>
+    </div>
+
+    <script src="admin.js" type="module"></script>
+  </body>
+</html>

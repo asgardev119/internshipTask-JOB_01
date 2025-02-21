@@ -1,12 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Permanent+Marker&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Permanent+Marker&family=Rancho&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Permanent+Marker&family=Rancho&display=swap");
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Rancho", serif;
   font-style: normal;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 @media (max-width: 768px) {
   h1 {
     font-size: 16px;
@@ -17,11 +29,13 @@ header {
   justify-content: space-around;
   align-items: center;
   padding: 20px 20px;
-  background-color: black;
+  background: #232526;
+
   color: white;
   position: fixed;
   width: 100%;
   z-index: 10;
+  border-bottom: 1px solid #fff;
 }
 
 .logo {
@@ -95,16 +109,25 @@ header {
 }
 
 .hero {
-  background: url("images/banner.jpeg") no-repeat center center/cover;
-  text-align: start;
+  text-align: center;
   padding: 100px 20px;
-  background-position: center;
-  background-size: cover;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 50px;
   margin-bottom: 20px;
+  border-bottom: 1px solid;
 }
 
 .hero button {
@@ -122,18 +145,29 @@ header {
 }
 
 .cta {
-  background: url("https://sayahomes.com/assets/images/career-Banner.webp")
-    no-repeat center center/cover;
-  text-align: start;
-  padding: 100px 20px;
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #f4f4f4;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  width: 90%;
+  margin: auto;
+  border: 1px solid;
+  border-radius: 20px;
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
 }
 
 .cta h2 {
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 20px;
+}
+.cta p {
+  width: 100%;
+  height: auto;
+  font-size: 20px;
+  text-align: center;
 }
 
 .cta button {
@@ -145,7 +179,7 @@ header {
   border: 1px solid white;
   color: white;
   border-radius: 5px;
-  opacity: 0.8;
+  margin-bottom: 20px;
 }
 
 .features {
@@ -155,13 +189,19 @@ header {
   gap: 10px;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: white;
+
+  margin-bottom: 20px;
 }
 
 .feature-item {
   text-align: center;
   width: 250px;
-  border-bottom: 1px solid;
+  border: 1px solid #fff;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
 }
 
 .feature-item img {
@@ -171,10 +211,100 @@ header {
   object-fit: contain;
 }
 
+/* Feedback slider container */
+.feedback-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+/* Feedback container holds all feedback cards */
+.feedback-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Feedback card styling */
+.feedback-card {
+  min-width: 150px;
+  max-width: 200px;
+  margin: 0 15px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #232526;
+
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.feedback-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid #fff;
+}
+
+.feedback-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feedback-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Navigation buttons */
+.slider-button {
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .feedback-card {
+    min-width: 200px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-card {
+    min-width: 150px;
+    max-width: 200px;
+  }
+}
+
 /* job page style */
 .jobs {
   padding: 60px 20px;
   text-align: center;
+  
 }
 
 .jobs form {
@@ -185,6 +315,9 @@ header {
   max-width: 100%;
   margin: 0 auto;
   padding: 10px;
+  border-bottom: 1px solid ;
+
+  
 }
 
 .jobs input:nth-child(1) {
@@ -193,6 +326,8 @@ header {
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 400px;
+  background: #232526;  
+
 }
 .jobs input:nth-child(2) {
   padding: 10px;
@@ -200,6 +335,8 @@ header {
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 200px;
+  background: #232526;  
+
 }
 
 .jobs button {
@@ -217,12 +354,16 @@ header {
   .jobs h1 {
     padding: 10px;
   }
+  .cta p {
+    font-size: 16px;
+  }
 }
 
 .job-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  
 }
 
 .job-item {
@@ -230,6 +371,10 @@ header {
   padding: 20px;
   border-radius: 10px;
   text-align: left;
+  background: #232526;  
+  background: -webkit-linear-gradient(to right, #414345, #232526);  
+  background: linear-gradient(to right, #414345, #232526);
+  border-bottom: 1px solid #fff;
 }
 
 .job-item button {
@@ -263,6 +408,9 @@ header {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background: #232526;  
+  background: -webkit-linear-gradient(to right, #414345, #232526);  
+  background: linear-gradient(to right, #414345, #232526);
 }
 
 .post-job button {
@@ -298,6 +446,9 @@ header {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background: #232526;  
+  background: -webkit-linear-gradient(to right, #414345, #232526);  
+  background: linear-gradient(to right, #414345, #232526);
 }
 
 .signup button,
@@ -327,7 +478,7 @@ header {
 }
 
 .blog-item {
-  background-color: #f4f4f4;
+  background: #232526;  
   padding: 20px;
   border-radius: 10px;
   width: 20%;
@@ -361,6 +512,20 @@ header {
   text-decoration: underline;
 }
 
+.blog-list button {
+  padding: 5px 15px;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  margin-left: 100px;
+  font-weight: 600;
+  color: #f4f4f4;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Contact Page Styles */
 .contact {
   padding: 60px 20px;
@@ -373,6 +538,7 @@ header {
   gap: 10px;
   max-width: 400px;
   margin: 0 auto;
+  
 }
 
 .contact input,
@@ -381,6 +547,9 @@ header {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background: #232526;  
+  background: -webkit-linear-gradient(to right, #414345, #232526);  
+  background: linear-gradient(to right, #414345, #232526);
 }
 
 .contact button {
@@ -413,7 +582,6 @@ header {
   }
 }
 
-
 /* profiile ui style */
 
 .profile-container {
@@ -441,8 +609,6 @@ header {
   padding: 20px;
 }
 
-
-
 .profile-picture {
   width: 100px;
   height: 100px;
@@ -463,7 +629,6 @@ header {
 
 .profile-info {
   color: #666;
-
 }
 
 .profile-info p {
@@ -486,11 +651,10 @@ header {
   margin-top: 2rem;
 }
 
-
 /* footer styles code  */
 
 footer {
-  background-color: black;
+  background: #232526;  
   color: white;
   padding: 40px 20px 20px;
   text-align: center;
@@ -579,5 +743,7 @@ footer {
   }
 }
 
-
-
+a {
+  text-decoration: none;
+  color: #fff;
+}

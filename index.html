@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HireWorld</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="web icon" type="png" href="images/icon.png">
+    <link rel="web icon" type="png" href="images/webicon.png" />
   </head>
   <body>
     <header>
@@ -13,7 +13,7 @@
 
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="jobs.html">Jobs</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -26,13 +26,27 @@
 
     <section class="hero">
       <h1>Find Your Dream Job</h1>
-      <p>Join thousands of employers and job seekers.</p>
+      <p>
+        Unlock endless possibilities with just a click! Whether you're a fresh
+        graduate eager to start your career or an experienced professional
+        seeking new challenges, we've got you covered. Join thousands of
+        employers and job seekers in a dynamic community where opportunities
+        meet talent. Start your journey today and find a role that truly fits
+        your aspirations. Your dream job is waiting—let’s make it a reality!
+      </p>
       <button onclick="window.location.href='jobs.html'">Find Jobs</button>
     </section>
 
     <section class="cta">
       <h2>Join Now</h2>
-      <p>Sign up to get started.</p>
+      <p>
+        Sign up today to join a vibrant community of job seekers and
+        professionals! Gain exclusive access to a wide range of career
+        opportunities, connect with top employers, and get personalized job
+        recommendations that match your skills and aspirations. Start your
+        journey towards landing your dream job with just a few clicks!
+      </p>
+
       <button onclick="window.location.href='signup.html'">Sign Up</button>
     </section>
     <h2 style="text-align: center">Key Features</h2>
@@ -54,12 +68,19 @@
       </div>
     </section>
 
+    <!-- feedbck -->
+    <div class="feedback-slider">
+      <div class="slider-button prev" id="prev">&#10094;</div>
+      <div class="feedback-container" id="feedbackContainer"></div>
+      <div class="slider-button next" id="next">&#10095;</div>
+    </div>
+
     <footer>
       <div class="footer-content">
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="jobs.html">Jobs</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -74,10 +95,16 @@
         <div class="footer-section">
           <h3>Follow Us</h3>
           <ul class="social-links">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Instagram</a></li>
+            <li>
+              <a href="https://www.facebook.com/iasgaransari/">Facebook</a>
+            </li>
+            <li><a href="https://github.com/asgardev119">Github</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/asgar-ansari/">LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/iasgaransarii">Instagram</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -88,6 +115,6 @@
 
     <script src="shared.js"></script>
     <script src="script.js"></script>
-    
+    <script src="feedbacks.js" type="module"></script>
   </body>
 </html>

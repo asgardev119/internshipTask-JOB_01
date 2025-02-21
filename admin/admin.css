@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
+}
+
+/* Login Section */
+.login-section {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  width: 60%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
+}
+
+.login-section h2 {
+  margin-bottom: 20px;
+
+  font-size: 24px;
+}
+
+.login-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-section label {
+  font-weight: 600;
+  color: #555;
+  text-align: left;
+}
+
+.login-section input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
+}
+
+.login-section input:focus {
+  border-color: black;
+}
+
+.login-section button {
+  padding: 12px;
+  background: #232526;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: auto;
+  border: 1px solid;
+  width: 200px;
+  margin: auto;
+}
+
+.login-section button:hover {
+  background: #fff;
+  color: black;
+}
+
+/* Admin Dashboard */
+.admin-dashboard {
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  min-height: 100vh;
+  max-height: auto;
+}
+
+.admin-dashboard h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.logout-btn {
+  padding: 10px 20px;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+}
+
+#job-summary {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.dashboard-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.post-job-btn,
+.view-jobs-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px;
+}
+
+/* Job Post Section */
+
+.job-post-section h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.job-post-section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: auto;
+  width: 50%;
+  margin: auto;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.job-post-section label {
+  font-weight: 600;
+}
+
+.job-post-section input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  width: 80%;
+  background-color: #232526;
+  color: #fff;
+}
+
+
+.job-post-section button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  height: auto;
+  width: 200px;
+  margin: auto;
+}
+
+
+/* Posted Jobs List */
+#posted-jobs-list {
+  margin-top: 20px;
+}
+
+#posted-jobs-list h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+#job-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+#job-list li {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+}
+
+#job-list li:hover {
+  transform: translateY(-5px);
+}
+
+#job-list li h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#job-list li p {
+  margin: 5px 0;
+  color: #555;
+}
+
+#job-list li a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#job-list li a:hover {
+  color: #0056b3;
+}
+
+#job-list li button {
+  padding: 8px 16px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  width: auto;
+}
+
+#job-list li button.edit-btn {
+  background: #007bff;
+}
+
+#job-list li button.edit-btn:hover {
+  background: #0056b3;
+}
+
+#job-list li button.delete-btn:hover {
+  background: #a71d2a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    height: auto;
+  }
+  .job-post-section form {
+    width: 100%;
+  }
+  .login-section {
+    width: 100%;
+  }
+  .dashboard-buttons {
+    flex-direction: column;
+  }
+
+  .post-job-btn,
+  .view-jobs-btn {
+    width: 100%;
+  }
+
+  #job-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .login-section,
+  .admin-dashboard {
+    padding: 20px;
+  }
+
+  .login-section h2,
+  .admin-dashboard h2 {
+    font-size: 20px;
+  }
+
+  .login-section input,
+  .job-post-section input {
+    font-size: 14px;
+  }
+
+  .login-section button,
+  .logout-btn,
+  .post-job-btn,
+  .view-jobs-btn,
+  .job-post-section button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

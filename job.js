@@ -1,9 +1,9 @@
-import { jobList } from "./mockData.js";
+import { currentJobList } from "./mockData.js";
 
 // Function to filter jobs based on search query and location
 
 function filterJobs(searchTerm, locationTerm) {
-  return jobList.filter((job) => {
+  return currentJobList.filter((job) => {
     const roleMatch = job.role.toLowerCase().includes(searchTerm.toLowerCase());
     const locationMatch = locationTerm
       ? job.location.toLowerCase().includes(locationTerm.toLowerCase())
@@ -33,7 +33,7 @@ function renderJobs(filteredJobs) {
       <p>Location: ${job.location}</p>
       <p>Experience: ${job.experience}</p>
       <p>Salary: ${job.salary}</p>
-      <button>Apply Now</button>
+      <button><a href = "${job.url}">Apply Now </a></button>
     `;
 
     jobListContainer.appendChild(jobItem);
@@ -54,5 +54,5 @@ document
   });
 
 document.addEventListener("DOMContentLoaded", function () {
-  renderJobs(jobList);
+  renderJobs(currentJobList);
 });
