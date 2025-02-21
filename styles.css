@@ -279,10 +279,13 @@ header {
 
 .prev {
   left: 10px;
+  background-color: transparent;
 }
 
 .next {
   right: 10px;
+  background-color: transparent;
+
 }
 
 /* Responsiveness */

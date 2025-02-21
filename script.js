@@ -8,13 +8,19 @@ menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle("active");
 });
 
+document.addEventListener("click", (e) => {
+  if (!menuIcon.contains(e.target) && !navLinks.contains(e.target)) {
+    navLinks.classList.remove("open");
+    menuIcon.classList.remove("active");
+  }
+});
 // user signUp js code
 
 document.addEventListener("DOMContentLoaded", function () {
   const signUpForm = document.querySelector(".signup form");
 
   signUpForm.addEventListener("submit", function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     // Get input values
     const firstname = document.getElementById("firstname").value.trim();
@@ -119,7 +125,3 @@ function updateHeader() {
     navLinks.appendChild(profileLink);
   }
 }
-
-
-
-
